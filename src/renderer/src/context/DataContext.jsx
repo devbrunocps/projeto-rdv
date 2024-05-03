@@ -12,14 +12,16 @@ export function DataContextProvider({ children }) {
     const [dateExpense, setDateExpense] = useState("")
 
     const [place, setPlace] = useState("")
-    const [transport, setTransport] = useState("")
-    const [parking, setParking] = useState("")
-    const [vehicle, setVehicle] = useState("")
-    const [accommodation, setAccommodation] = useState("")
-    const [meals, setMeals] = useState("")
-    const [phone, setPhone] = useState("")
-    const [others, setOthers] = useState("")
+    const [transport, setTransport] = useState(0)
+    const [parking, setParking] = useState(0)
+    const [vehicle, setVehicle] = useState(0)
+    const [accommodation, setAccommodation] = useState(0)
+    const [meals, setMeals] = useState(0)
+    const [phone, setPhone] = useState(0)
+    const [others, setOthers] = useState(0)
     const [comments, setComments] = useState("")
+    const [reasonMeals, setReasonMeals] = useState("")
+    const [highMeals, setHighMeals] = useState(true)
 
     const handleChange = (ev, setState) => {
         setState(ev.value)
@@ -57,6 +59,10 @@ export function DataContextProvider({ children }) {
         setOthers,
         comments,
         setComments,
+        reasonMeals,
+        setReasonMeals,
+        highMeals,
+        setHighMeals,
     }
 
 

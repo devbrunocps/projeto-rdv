@@ -51,15 +51,15 @@ function App() {
     return (
         <DataContextProvider>
             {screen == 0 ? <div className="w-[100vw] min-h-[100vh] bg-neutral-900 flex items-center pt-24 flex-col gap-8 p-8">
-                <div className="">
-                    <span className="font-mont font-bold text-neutral-200 text-2xl">RELATÓRIO DE DESPESAS DE VIAGEM</span>
+                <div className="text-center">
+                    <span className="max-md:text-xl font-mont font-bold text-neutral-200 text-2xl">RELATÓRIO DE DESPESAS DE VIAGEM</span>
                 </div>
                 <div className="w-full min-h-36 flex justify-center items-center">
                     <img src={logo} width={240} height={190} alt="Logo Empresa" />
                 </div>
                 <SelectField onchange={(ev) => setCompany(ev.target.value)} options={companies} id="companies" value={company} label="Selecione sua empresa:" />
-                <div>
-                    <button onClick={() => setScreen(1)} className="bg-neutral-800 text-white flex gap-2 font-mont rounded-xl px-3 py-[0.5rem] items-center">
+                <div className="w-full flex justify-center">
+                    <button onClick={() => setScreen(1)} className=" bg-neutral-800 text-white flex gap-2 font-mont rounded-xl px-3 py-[0.5rem] items-center">
                         <span className="text-sm">Próxima Etapa</span>
                         <img width={15} height={15} src={ArrowRight} alt="" />
                     </button>
